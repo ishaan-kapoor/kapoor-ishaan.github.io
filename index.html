@@ -60,7 +60,7 @@
         </div>
     </center>
     <script>
-        var input = document.getElementById("search");
+        var input = document.getElementsByTagName("input")[0];
         input.addEventListener("keydown", function (e) {
             if (e.key === "Enter") {
                 func();
@@ -68,11 +68,11 @@
         });
 
         function func() {
-            var text = document.getElementById("search").value;
+            var text = document.getElementsByTagName("input")[0].value;
             var t_array = text.split(" ");
             alert(t_array[1]);
-            const tags = ["google", "youtube"]
-            const link = ["http://google.com/search?q=", "http://youtube.com/results?search_query="]
+            const tags = ["google", "youtube", "github", "stackoverflow", "reddit", "archlinux"]
+            const link = ["http://google.com/search?q=", "http://youtube.com/results?search_query=", "https://github.com/search?ref=opensearch&q=", "https://stackoverflow.com/search?q=", "https://www.reddit.com/search/?q=", "https://archlinux.org/packages/?q="]
             if (tags.includes(t_array[0].toLowerCase())) {
                 window.location.href = link[tags.indexOf(t_array[0].toLowerCase())] + t_array.slice(1).join('+');
             }
