@@ -1,0 +1,3 @@
+[submodule "multisearch"]
+	path = multisearch
+	url = https://github.com/kapoor-ishaan/multisearch
